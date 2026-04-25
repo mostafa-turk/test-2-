@@ -1,0 +1,20 @@
+.assignment-title {
+  text-align: center;
+  padding: 30px;
+  font-size: 28px;
+  color: #3b82f6;
+}
+
+.assignment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-pending {
+  color: #f59e0b;
+}
+
+.status-done {
+  color: #22c55e;
+}

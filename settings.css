@@ -1,0 +1,12 @@
+.settings-box {
+  max-width: 600px;
+  margin: auto;
+}
+
+.setting-item {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+}

@@ -1,0 +1,274 @@
+/* =========================
+   LOGIN PAGE (MATCHES SIGNUP EXACTLY)
+   Homework Tracker Pro
+========================= */
+
+/* Import shared design tokens approach (must match signup) */
+:root {
+  --bg: #0B0F1A;
+  --panel: #111827;
+  --panel-2: #0F172A;
+
+  --blue: #2563EB;
+  --blue-light: #3B82F6;
+
+  --text: #E5E7EB;
+  --muted: #9CA3AF;
+
+  --border: #1F2937;
+}
+
+/* =========================
+   BASE RESET (IDENTICAL)
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+}
+
+/* =========================
+   SHARED AUTH LAYOUT
+========================= */
+
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LEFT BRAND PANEL (same as signup) */
+.auth-left {
+  flex: 1;
+  background: radial-gradient(circle at top,
+    #1F2937,
+    #0B0F1A,
+    #0B0F1A
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* RIGHT PANEL */
+.auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+/* =========================
+   AUTH CARD (IDENTICAL TO SIGNUP)
+========================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(17, 24, 39, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(14px);
+  animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   BRAND SECTION
+========================= */
+
+.brand h1 {
+  font-size: 2.2rem;
+}
+
+.brand span {
+  color: var(--blue-light);
+}
+
+.brand p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* glow orb (same as signup) */
+.glow-orb {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: var(--blue);
+  filter: blur(120px);
+  opacity: 0.35;
+  border-radius: 50%;
+}
+
+/* =========================
+   HEADINGS (SAME STYLE)
+========================= */
+
+.auth-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.muted {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   INPUTS (IDENTICAL)
+========================= */
+
+label {
+  font-size: 0.85rem;
+  margin-top: 14px;
+  display: block;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  outline: none;
+  transition: 0.25s ease;
+}
+
+input:focus {
+  border-color: var(--blue-light);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+}
+
+/* =========================
+   BUTTONS (SAME AS SIGNUP)
+========================= */
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-light));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(59,130,246,0.4);
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid var(--blue-light);
+  border-radius: 12px;
+  color: var(--blue-light);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--blue-light);
+  color: white;
+}
+
+/* =========================
+   LOGIN ONLY UX (MINIMAL DIFFERENCE)
+========================= */
+
+/* row layout for remember + forgot */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.link {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* divider */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #6B7280;
+}
+
+/* switch text */
+.switch {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.switch a {
+  color: var(--blue-light);
+  text-decoration: none;
+}
+
+/* =========================
+   ANIMATIONS (MATCH SIGNUP)
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE (IDENTICAL)
+========================= */
+
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    min-height: 220px;
+  }
+
+  .auth-card {
+    margin: 20px;
+  }
+}

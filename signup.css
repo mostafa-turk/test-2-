@@ -1,0 +1,299 @@
+/* =========================
+   HOMEWORK TRACKER PRO
+   SIGNUP PAGE STYLES
+========================= */
+
+/* 🎨 DESIGN TOKENS */
+:root {
+  --bg: #0B0F1A;
+  --panel: #111827;
+  --panel-soft: #0F172A;
+
+  --blue: #2563EB;
+  --blue-light: #3B82F6;
+  --blue-glow: rgba(59,130,246,0.35);
+
+  --text: #E5E7EB;
+  --muted: #9CA3AF;
+
+  --border: #1F2937;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LEFT PANEL */
+.auth-left {
+  flex: 1;
+  background: radial-gradient(circle at top,
+    #1F2937,
+    #0B0F1A 60%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* RIGHT PANEL */
+.auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 20px;
+}
+
+/* =========================
+   BRAND SECTION
+========================= */
+
+.brand {
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+}
+
+.brand h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand span {
+  color: var(--blue-light);
+}
+
+.brand p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+/* GLOW BACKGROUND ORB */
+.glow-orb {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--blue);
+  filter: blur(140px);
+  opacity: 0.25;
+  border-radius: 50%;
+}
+
+/* =========================
+   AUTH CARD
+========================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(17, 24, 39, 0.78);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 42px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: fadeUp 0.6s ease;
+}
+
+/* HEADINGS */
+.auth-card h2 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.muted {
+  color: var(--muted);
+  margin-bottom: 22px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABELS */
+label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+/* INPUTS & SELECT */
+input,
+select {
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* FOCUS STATE */
+input:focus,
+select:focus {
+  border-color: var(--blue-light);
+  box-shadow: 0 0 0 3px var(--blue-glow);
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--blue-light);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  margin-top: 22px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-light));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.3);
+}
+
+/* SECONDARY BUTTON */
+.btn-secondary {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--blue-light);
+  color: var(--blue-light);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--blue-light);
+  color: white;
+  box-shadow: 0 10px 25px rgba(59,130,246,0.25);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  text-align: center;
+  margin: 18px 0;
+  color: #6B7280;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   SWITCH LINK
+========================= */
+
+.switch {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.switch a {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    min-height: 240px;
+    text-align: center;
+  }
+
+  .auth-card {
+    margin: 20px;
+    padding: 30px;
+  }
+}
